@@ -1,10 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage("Print") {
+        stage("Checkout") {
             steps {
-                echo "Hello World"
-                echo "This is Bhuvanesh"
+                git branch: 'main', url: 'https://github.com/bhuvaneshcmd/jenkins-webhook.git'
             }
         }
     }
